@@ -2,7 +2,7 @@ package com.brianapi.demo.controllers;
 
 
 import com.brianapi.demo.entities.EventData;
-import com.brianapi.demo.services.EventDataRepository;
+import com.brianapi.demo.repositories.EventDataRepository;
 import com.brianapi.demo.utils.Event;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
