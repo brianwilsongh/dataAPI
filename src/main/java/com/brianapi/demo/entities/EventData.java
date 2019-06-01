@@ -12,14 +12,17 @@ import javax.validation.constraints.Positive;
 @Entity
 public class EventData {
 
+    @GeneratedValue
     @Id
-    @NotNull
-    @Positive
-    private long millis_since_epoch;
+    private long id;
 
     @NotNull
     @Positive
-    private long user_id;
+    private long millisSinceEpoch;
+
+    @NotNull
+    @Positive
+    private long userId;
 
     // consider making this enum?
     @NotNull
@@ -28,26 +31,26 @@ public class EventData {
 
     public EventData() {}
 
-    public EventData(long millis_since_epoch, long user_id, String event) {
-        this.millis_since_epoch = millis_since_epoch;
-        this.user_id = user_id;
+    public EventData(long millisSinceEpoch, long userId, String event) {
+        this.millisSinceEpoch = millisSinceEpoch;
+        this.userId = userId;
         this.event = event;
     }
 
     public long getMillis_since_epoch() {
-        return millis_since_epoch;
+        return millisSinceEpoch;
     }
 
-    public void setMillis_since_epoch(long millis_since_epoch) {
-        this.millis_since_epoch = millis_since_epoch;
+    public void setMillis_since_epoch(long millisSinceEpoch) {
+        this.millisSinceEpoch = millisSinceEpoch;
     }
 
     public long getUser_id() {
-        return user_id;
+        return userId;
     }
 
     public void setUser_id(long user_id) {
-        this.user_id = user_id;
+        this.userId = user_id;
     }
 
     public String getEvent() {
@@ -61,8 +64,8 @@ public class EventData {
     @Override
     public String toString() {
         return "EventData{" +
-                "millis_since_epoch=" + millis_since_epoch +
-                ", user_id=" + user_id +
+                "millis_since_epoch=" + millisSinceEpoch +
+                ", userId=" + userId +
                 ", event=" + event +
                 '}';
     }
