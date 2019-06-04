@@ -64,7 +64,7 @@ public class EventData {
     @Override
     public String toString() {
         return "EventData{" +
-                "millis_since_epoch=" + millisSinceEpoch +
+                "millisSinceEpoch=" + millisSinceEpoch +
                 ", userId=" + userId +
                 ", event=" + event +
                 '}';
